@@ -1,6 +1,6 @@
 # Friday Team
 ## repositorio do trabalho da 
-disciplina
+## disciplina
 ## de programacao corporativa
 #
 #
