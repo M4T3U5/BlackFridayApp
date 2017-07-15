@@ -1,26 +1,28 @@
+from time import gmtime as sysdata
 class Data:
 	__dia = None
 	__mes = None
 	__ano = None
 	
+	__nomes_por_extenso = ["Janeiro","Fevereiro"\
+	,"Marco","Abril","Maio","Junho","Julho","Agosto"\
+	,"Setembro","Outubro","Novembro","Dezembro"]
+	
 	def __init__(self,dia=None,mes=None,ano=None):
-		try:
-			self.__dia = int(dia)
-			self.__mes = int(mes)
-			self.__ano = int(ano)
-			self.isValid()
-		except:
-			raise("except")
+		self.__dia = int(dia)
+		self.__mes = int(mes)
+		self.__ano = int(ano)
+		self.isValid()
+	
+	def toExtenseString(self):
+		return (str(self.__dia)+ " de "+self.__nomes_por_extenso[self.__mes-1] + " de "+str(self.__ano))
 		
 	def toString(self):
 		return str(self.__dia)+"/"+str(self.__mes)+"/"+str(self.__ano)
 		
-	def parseFromString(self,string):
+	def parseFromString(string):
 		valores = string.split("/")
-		self.__dia = int(valores[0])
-		self.__mes = int(valores[1])
-		self.__ano = int(valores[2])
-		self.isValid()
+		return Data(valores[0],valores[1],valores[2])
 		
 	def compareTo(self,data2):
 		if self.__ano > data2.__ano:
@@ -38,6 +40,9 @@ class Data:
 		
 		return 0
 		
+	def getSystemData():
+		return Data(int(sysdata().tm_mday),int(sysdata().tm_mon),int(sysdata().tm_year))
+		
 	def getDia(self):
 		return self.__dia
 	def getMes(self):
@@ -46,10 +51,13 @@ class Data:
 		return self.__ano
 		
 	def isValid(self):
+		if self.__dia == None or self.__mes == None or self.__ano == None:
+			return False
 		if (self.__dia > 31 or self.__dia <= 0):
-			print("dia invalido")
+			return False
 		if (self.__mes > 12 or self.__mes <= 0):
-			print("mes invalido")
+			return False
 		if (self.__ano <= 0):
-			print("ano invalido")
+			return False
+		return True
 		
