@@ -1,5 +1,4 @@
-from models.Hash import Hash
-
+import models.Hash as Hash
 class CupomDeDesconto:
 	
 	__codigo = None
@@ -25,3 +24,20 @@ class CupomDeDesconto:
 		
 	def getEstado(self):
 		return self.__estado
+		
+	def setHash(self,hash):
+		self.__codigo = hash
+		
+	def parseFromString(string):
+		v = string.split(",")
+		c = CupomDeDesconto(v[0],v[1],v[2])
+		c.setCodigo(v[3])
+		return c
+		
+		
+	def toCSVString(self):
+		return str(self.__percentual)+","+self.__data_validade.toString()+","+self.__estado\
+		+","+self.__codigo
+		
+	
+		
