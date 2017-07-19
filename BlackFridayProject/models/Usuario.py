@@ -36,7 +36,7 @@ class Usuario():
 	## retorna um Usuario de uma string
 	def parseFromString(string):
 		val = string.split(",")
-		usuario = Usuario(val[0],val[1],val[2])
+		usuario = Usuario(val[0],val[1],Data.paseFromDateString(val[2]))
 		usuario.setHashCode(val[3])
 		return usuario
 		
