@@ -27,13 +27,19 @@ class Data:
 		return str(self.__dia)+"/"+str(self.__mes)+"/"+str(self.__ano)
 		
 	## metodo que retorna uma data criada de uma string no padrao 'dd/mm/yyyy'
-	def parseFromString(string):
+	def parseFromDateString(string):
 		valores = string.split("/")
 		return Data(valores[0],valores[1],valores[2])
 	
     ## metodo para gerar CSV:
 	def toCSVString(self):
 		return str(self.__dia)+","+str(self.__mes)+","+str(self.__ano)
+		
+	## metodo que retorna uma data de uma string CSV
+	def parseFromString(string):
+		valores = string.split(",")
+		return Data(valores[0],valores[1],valores[2])
+	
 		
 	## compara com outra data. retorna 1 se maior que, -1 se menor que e 0 se igual. 
 	def compareTo(self,data2):
