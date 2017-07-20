@@ -1,1 +1,1 @@
-web: python ./BlackFridayProject/app.py $PORT
+web: python ./BlackFridayProject/teste.py $PORT
