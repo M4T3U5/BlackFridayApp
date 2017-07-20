@@ -33,3 +33,6 @@ Repositorio do grupo sobre a ativade de eventos para a disciplina de Programacao
 
 ### Agenda do Projeto:
 	https://trello.com/b/2w91uXMv
+
+### URL do Projeto (Ainda nao funcional)
+	https://blackfridayeventos.herokuapp.com/
