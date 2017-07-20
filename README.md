@@ -1,10 +1,9 @@
 # Friday Team
-## repositorio do trabalho da 
-## disciplina
-## de programacao corporativa
-#
-#
+## repositorio do grupo
+## friday da disciplina
+## programacao corporativa
 ## membros:
 * Alexsander Magnum
+* Daniel Farias
 * Mateus Oliveira
 * Wildrimak Pereira
