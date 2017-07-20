@@ -1,25 +1,33 @@
-'''
-#coding:utf-8
-import models
-## usage: models.nome_arquivo.nome_classe (one way)
-## or models could be imported as: 'import models.modelo_a_importar as como importar (another way)
+### Friday X-unit
+import TestUnit as teste
+from models.Tipo_Atividade import TipoAtividade
+from models.Atividade import Atividade
+from models.CupomDeDesconto import CupomDeDesconto
+#from models.Data import Data
+#from models.Evento import Evento
+#from models.Inscricao import Inscricao
+#from models.Instituicao import Instituicao
+
+
 def main():
-	## TODO something here
+	
+	"""
+	atividade = Atividade("atividade1","fhehfh",100.00,"abc")
+	print(teste.testFloat(100.1,atividade.getPreco()))
+	print(atividade.toCSVString())
+	
+	a2 = Atividade.parseFromString(atividade.toCSVString())
+	print(a2.getNome())
+	"""
+	
+	cupom = CupomDeDesconto(
+	
+	
 	
 main()
 
-
-'''
-
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
-import os
-from os import environ as env
-from sys import argv
-
-import bottle
-from bottle import default_app, request, route, response, get
+"""
+from bottle import *
 
 bottle.debug(True)
 
@@ -43,4 +51,6 @@ def index():
 
     return ret
 
-bottle.run(host='0.0.0.0', port=argv[1])
+run(host='localhost', port=8080)
+
+"""
