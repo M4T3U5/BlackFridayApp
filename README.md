@@ -4,21 +4,21 @@ Repositorio do grupo sobre a ativade de eventos para a disciplina de Programacao
 
 ### Prototipo (V1):
 	
-	Sistema capaz de cadastar usuarios e autenticar por login, enviar mensagens entre usuario , criacao de salas de reuniao e busca de localizacao dentro do app.
+	Sistema capaz de cadastar usuarios, eventos e entidades relacionadas de forma a aprimorar a experiencia de buscas de eventos.
 
 ## Projeto
 
 ### Diagrama de Classes
 
-!()[]
+![]()
 
 ### Diagrama de Casos de Uso
 
-!()[]
+![]()
 
 ### Diagrama Entidae-Relacionamento
 
-!()[]
+![Diagrama Entidade Relacionamento](ER_DIAGRAM.png)
 
 ## Membros:
 
