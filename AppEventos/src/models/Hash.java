@@ -20,4 +20,18 @@ public class Hash
 		}
 		return hash;
 	}
+	
+	public static long generateLongIntHash(int hashLenght){
+		hash = "";
+		for(int i = 0; i < hashLenght; i++){
+			// esse metodo gera um inteiro no range especificado
+			int numero = ThreadLocalRandom.current().nextInt(0,9);
+
+			// adiciona a string do numero na string hash
+			hash += (String.valueOf(numero));
+		}
+		return Long.parseLong(hash);
+	}
+	
+	
 }
