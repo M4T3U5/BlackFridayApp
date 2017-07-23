@@ -2,11 +2,15 @@ package models;
 
 public class ItemInscricao
 {
-	private String inscricaoId;
-	private String atividadeId;
+	private int inscricaoId;
+	private int atividadeId;
 	private float precoItem;
 	
-	public ItemInscricao(String inscricaoId,String codAtividade,float preco){
+	public ItemInscricao(){
+		
+	}
+	
+	public ItemInscricao(int inscricaoId,int codAtividade,float preco){
 		
 		this.inscricaoId = inscricaoId;
 		this.atividadeId = codAtividade;
@@ -16,11 +20,11 @@ public class ItemInscricao
 	
 	// getters
 	
-	public String getCodigoInscricao(){
+	public int getCodigoInscricao(){
 		return this.inscricaoId;
 	}
 	
-	public String getCodigoAtividade(){
+	public int getCodigoAtividade(){
 		return this.atividadeId;
 	}
 	

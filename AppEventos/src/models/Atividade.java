@@ -1,36 +1,40 @@
 package models;
+import enum.*;
 
 public class Atividade
 {
 	
-	private String id;
-	private String idEvento;
+	private int id;
+	private int idEvento;
 	private float precoAtividade;
 	private String descricao;
 	private int tipoAtividade;
 	
 	
-	public Atividade(String idEvento,float precoAtividade,String descricao,int tipoAtividade){
+	private TipoAtividade tipo;
+	
+	public Atividade(){
+		
+	}
+	
+	public Atividade(int idEvento,float precoAtividade,String descricao,int tipoAtividade){
 		
 		// TODO o id pode ter como prefixo os N primeiros caracteres do idEvento correspondente
 		// para padronizar todas as atividades de um evento
-		this.id = Hash.generateStringHash(10);
+		this.id = Hash.generateLongIntHash(10);
 		
 		this.idEvento = idEvento;
 		this.precoAtividade = precoAtividade;
 		this.descricao = descricao;
 		this.tipoAtividade = tipoAtividade;
-		
 	}
-	
-	
 	// getters 
 	
-	public String getId(){
+	public int getId(){
 		return this.id;
 	}
 	
-	public String getIdEvento(){
+	public int getIdEvento(){
 		return this.idEvento;
 	}
 	
@@ -48,11 +52,11 @@ public class Atividade
 	
 	// setters
 	
-	public void setId(String id){
+	public void setId(int id){
 		this.id = id;
 	}
 
-	public void setIdEvento(String idEvento){
+	public void setIdEvento(int idEvento){
 		this.idEvento = idEvento;
 	}
 

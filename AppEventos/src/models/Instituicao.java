@@ -2,31 +2,25 @@ package models;
 
 public class Instituicao
 {
-	private String id;
+	private int id;
 	private String nome;
 	private String urlLogo;
 	
+	public Instituicao(){
+		
+	}
+	
 	public Instituicao(String nome,String logoUrl){
 		
-		this.id = Hash.generateStringHash(20);
+		this.id = Hash.generateLongIntHash(20);
 		this.nome = nome;
 		this.urlLogo = logoUrl;
 	}
 	
-	// sobrrcarga de construtor para teste ORM
-	
-	public Instituicao(String nome,String logoUrl, String id){
-		
-		if (id.equals(null) || id.length() < 20) throw new IllegalArgumentException();
-		
-		this.id = id;
-		this.nome = nome;
-		this.urlLogo = logoUrl;
-	}
 	
 	// getters 
 	
-	public String getId(){
+	public int getId(){
 		return this.id;
 	}
 	

@@ -19,9 +19,10 @@ public class Hash
 			hash += (char)indice;
 		}
 		return hash;
+		
 	}
 	
-	public static long generateLongIntHash(int hashLenght){
+	public static int generateLongIntHash(int hashLenght){
 		hash = "";
 		for(int i = 0; i < hashLenght; i++){
 			// esse metodo gera um inteiro no range especificado
@@ -30,7 +31,7 @@ public class Hash
 			// adiciona a string do numero na string hash
 			hash += (String.valueOf(numero));
 		}
-		return Long.parseLong(hash);
+		return Integer.parseInt(hash);
 	}
 	
 	

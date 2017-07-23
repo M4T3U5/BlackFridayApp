@@ -5,18 +5,21 @@ import enum.*;
 public class Evento
 {
 	
-	private String id;
+	private int id;
 	private String nome;
-	private String usuarioId;
-	private String tagId;
+	private int usuarioId;
+	private int tagId;
 	private StatusEvento statusEvento;
 	private Date dataInicio;
 	private Date dataFim;
 	
-	
-	public Evento(String nome,String usuarioId,Date dataInicio, Date dataFim){
+	public Evento(){
 		
-		this.id = Hash.generateStringHash(10);
+	}
+	
+	public Evento(String nome,int usuarioId,Date dataInicio, Date dataFim){
+		
+		this.id = Hash.generateLongIntHash(10);
 		this.nome = nome;
 		this.usuarioId = usuarioId;
 		this.dataInicio = dataInicio;
@@ -24,7 +27,7 @@ public class Evento
 		this.statusEvento = StatusEvento.NOVO;
 		
 		// todo TAGID logic
-		this.tagId = "0";
+		this.tagId = 0;
 	}
 	
 	// getters
@@ -33,11 +36,11 @@ public class Evento
 		return this.nome;
 	}
 	
-	public String getId(){
+	public int getId(){
 		return this.id;
 	}
 	
-	public String getUsuarioId(){
+	public int getUsuarioId(){
 		return this.usuarioId;
 	}
 	
@@ -53,7 +56,7 @@ public class Evento
 		return this.statusEvento;
 	}
 	
-	public String getTags(){
+	public int getTags(){
 		return this.tagId;
 	}
 	

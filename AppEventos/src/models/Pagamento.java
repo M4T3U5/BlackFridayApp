@@ -1,19 +1,23 @@
 package models;
 import java.util.*;
+import interfaces.*;
 
 public class Pagamento
 {
 	
-	private String id;
-	private String inscricao;
+	private int id;
+	private int inscricao;
 	private Date dataPagamento;
 	private String estadoAtual;
 	private boolean hasPago;
 	
-	
-	public Pagamento(String inscricao,Date dataPagamento,String estado){
+	public Pagamento(){
 		
-		this.id = Hash.generateStringHash(20);
+	}
+	
+	public Pagamento(int inscricao,Date dataPagamento,String estado){
+		
+		this.id = Hash.generateLongIntHash(20);
 		this.inscricao = inscricao;
 		this.dataPagamento = dataPagamento;
 		this.estadoAtual = estado;
@@ -21,10 +25,10 @@ public class Pagamento
 		
 	}
 	
-	public String getId(){
+	public int getId(){
 		return this.id;
 	}
-	public String getInscricao(){
+	public int getInscricao(){
 		return this.inscricao;
 	}
 	public Date getDataPagamento(){
