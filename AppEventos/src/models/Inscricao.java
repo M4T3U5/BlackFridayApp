@@ -5,14 +5,14 @@ import interfaces.*;
 public class Inscricao implements Calculavel
 {
 	
-	private String inscricaoId;
-	private String userId;
+	private int inscricaoId;
+	private int userId;
 	private Date dataInscricao;
 	private float valorTotal;
 	
-	public Inscricao(String userId,Date dataInscricao){
+	public Inscricao(int userId,Date dataInscricao){
 			
-		this.inscricaoId = Hash.generateStringHash(30);
+		this.inscricaoId = Hash.generateLongIntHash(10);
 		this.userId = userId;
 		this.dataInscricao = dataInscricao;
 		this.valorTotal = (0);
@@ -21,33 +21,33 @@ public class Inscricao implements Calculavel
 	
 	// getters
 	
-	public String getInscricaoId(){
+	public int getInscricaoId(){
 		return this.inscricaoId;
 	}
-	public String getUserId(){
+	public int getUserId(){
 		return this.userId;
 	}
 	public Date getDataInscricao(){
 		return this.dataInscricao;
 	}
-	public String getValorTotal(){
+	public float getValorTotal(){
 		return this.inscricaoId;
 	}
 	
 	
 	// setters
 	
-	public void setInscricaoId(String inscricaoId){
+	public void setInscricaoId(int inscricaoId){
 		this.inscricaoId = inscricaoId;
 	}
-	public void setUserId(String userId){
+	public void setUserId(int userId){
 		this.userId = userId;
 	}
 	public void setDataInscricao(Date dataInscricao){
 		this.dataInscricao = dataInscricao;
 	}
-	public String setValorTotal(Date dataInscricao){
-		return this.inscricaoId;
+	public void setValorTotal(float total){
+		this.valorTotal = total;
 	}
 
 	public float calculaValorTotal()

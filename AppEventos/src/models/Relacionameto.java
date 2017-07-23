@@ -4,33 +4,30 @@ import enum.*;
 public class Relacionameto
 {
 	
-	private String id;
+	private int id;
 	private String descricao;
-	private String codEvento;
-	private String codInstituicao;
-	private TipoRelacionamento tipoRelacionamento;
+	private int codEvento;
+	private int codInstituicao;
+	private int tipoRelacionamento;
 	
-	public Relacionameto(String descricao, String codEvento,String codInstuicao, TipoRelacionamento tipo){
+	public Relacionameto(){
 		
-		this.id = Hash.generateStringHash(10);
+	}
+	
+	public Relacionameto(String descricao, int codEvento,int codInstuicao, int tipo){
+		
+		this.id = Hash.generateLongIntHash(10);
 		this.descricao = descricao;
 		this.codEvento = codEvento;
 		this.codInstituicao = codInstuicao;
 		this.tipoRelacionamento = tipo;
 	}
 	
-	public Relacionameto(String descricao, String codEvento,String codInstuicao, TipoRelacionamento tipo, String id){
-
-		this.id = id;
-		this.descricao = descricao;
-		this.codEvento = codEvento;
-		this.codInstituicao = codInstuicao;
-		this.tipoRelacionamento = tipo;
-	}
+	
 	
 	// getters
 	
-	public String getId(){
+	public int getId(){
 		return this.id;
 	}
 	
@@ -38,15 +35,15 @@ public class Relacionameto
 		return this.descricao;
 	}
 	
-	public String getCodEvento(){
+	public int getCodEvento(){
 		return this.codEvento;
 	}
 	
-	public String getCodigoInstituicao(){
+	public int getCodigoInstituicao(){
 		return this.codInstituicao;
 	}
 	
-	public TipoRelacionamento getTipo(){
+	public int getTipo(){
 		return this.tipoRelacionamento;
 	}	
 }

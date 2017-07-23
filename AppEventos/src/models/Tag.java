@@ -2,29 +2,20 @@ package models;
 
 public class Tag
 {
-	private String id;
+	private int id;
 	private String descricao;
 	private int qtdEventos;
 	
 	public Tag(String descricao,int qtdEventos){
 		
-		this.id = Hash.generateStringHash(30);
-		this.descricao = descricao;
-		this.qtdEventos = qtdEventos;
-	}
-	
-	public Tag(String descricao,int qtdEventos, String hash) throws IllegalArgumentException{
-		
-		if (hash.equals(null) || hash.length() < 30) throw new IllegalArgumentException();
-		
-		this.id = hash;
+		this.id = Hash.generateLongIntHash(30);
 		this.descricao = descricao;
 		this.qtdEventos = qtdEventos;
 	}
 	
 	// getters
 	
-	public String getId(){
+	public int getId(){
 		return this.id;
 	}
 	
@@ -40,15 +31,15 @@ public class Tag
 	
 	// getters
 
-	public void setId(String id){
+	void setId(int id){
 		this.id = id;
 	}
 
-	public void setDescricao(String descricao){
+	void setDescricao(String descricao){
 		this.descricao = descricao;
 	}
 
-	public void setQuantidadeEventos(int qtd){
+	void setQuantidadeEventos(int qtd){
 		this.qtdEventos = qtd;
 	}
 	

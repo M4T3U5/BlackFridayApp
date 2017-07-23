@@ -2,23 +2,33 @@ package models;
 
 public class Usuario
 {
+	private int id;
 	private String username;
 	private String password;
+	
+	public Usuario(){
+		
+	}
 	
 	public Usuario(String username, String password){
 		this.username = username;
 		this.password = password;
+		this.id = Hash.generateLongIntHash(20);
 		
 	}
 	
 	// getters 
 	
-	String getUserName(){
+	public String getUserName(){
 		return this.username;
 	}
 	
-	String getUserPassword(){
+	public String getUserPassword(){
 		return this.password;
+	}
+	
+	public int getUserId(){
+		return this.id;
 	}
 	
 	// setters
@@ -28,6 +38,9 @@ public class Usuario
 	}
 	void setUserPassword(String password){
 		this.password = password;
+	}
+	void setUserId(int id){
+		this.id = id;
 	}
 	
 }
