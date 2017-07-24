@@ -1,4 +1,4 @@
-package enumeretions;
+package enums;
 
 
 public enum StatusEvento

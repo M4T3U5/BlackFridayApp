@@ -1,5 +1,5 @@
 package models;
-import enumeretions.*;
+import enums.*;
 
 public class Atividade
 {
