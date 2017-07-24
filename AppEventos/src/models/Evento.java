@@ -1,6 +1,6 @@
 package models;
 import java.util.*;
-import enum.*;
+import  enumeretions.*;
 
 public class Evento
 {

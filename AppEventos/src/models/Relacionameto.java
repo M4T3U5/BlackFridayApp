@@ -1,5 +1,5 @@
 package models;
-import enum.*;
+import  enumeretions.*;
 
 public class Relacionameto
 {
